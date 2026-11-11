@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Science Planner 🥰</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Welcome student 🥰</h1>
+
+    <p class="college-link">
+      <a href="https://sci.cu.edu.eg/" target="_blank">
+        كلية العلوم – جامعة القاهرة
+      </a>
+    </p>
+
+    <p id="today-date"></p>
+
+    <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="lectures.html">المحاضرات</a>
+      <a href="notes.html">الملاحظات</a>
+      <a href="study.html">المذاكرة</a>
+      <a href="exams.html">الامتحانات</a>
+      <a href="settings.html">الإعدادات</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- كارت أقرب محاضرة -->
+    <section class="card">
+      <h2>أقرب محاضرة</h2>
+      <div id="next-lecture-card">
+        <p>لا توجد محاضرات قادمة</p>
+      </div>
+      <p id="lecture-countdown" class="countdown"></p>
+    </section>
+
+    <!-- كارت أقرب امتحان -->
+    <section class="card">
+      <h2>أقرب امتحان</h2>
+      <div id="next-exam-card">
+        <p>لا توجد امتحانات قادمة</p>
+      </div>
+      <p id="exam-countdown" class="countdown"></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>©eyad hamdy 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <script>
+    // عرض تاريخ اليوم والوقت
+    function updateDateTime() {
+      const now = new Date();
+      const options = {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      };
+      const dateElement = document.getElementById("today-date");
+      if (dateElement) {
+        dateElement.innerText =
+          now.toLocaleDateString('ar-EG', options) +
+          " - " +
+          now.toLocaleTimeString('ar-EG');
+      }
+    }
+
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+  </script>
+
+</body>
+</html>

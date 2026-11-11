@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الملاحظات |  Science Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Welcome student 🥰</h1>
+
+    <p class="college-link">
+      <a href="https://sci.cu.edu.eg/" target="_blank">
+        كلية العلوم – جامعة القاهرة
+      </a>
+    </p>
+
+    <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="lectures.html">المحاضرات</a>
+      <a href="notes.html">الملاحظات</a>
+      <a href="study.html">المذاكرة</a>
+      <a href="exams.html">الامتحانات</a>
+      <a href="settings.html">الإعدادات</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="card">
+      <h2>ملاحظاتك الدراسية 📝</h2>
+
+      <p>اكتبي أي ملاحظات مهمة هنا، وسيتم حفظها تلقائيًا.</p>
+
+      <textarea
+        id="notes-text"
+        placeholder="مثال:
+Organic:
+راجعي Chapter 4
+
+Physics:
+حلي الشيت"
+        oninput="saveNotes()"
+      ></textarea>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>©eyad hamdy 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المحاضرات |  Science Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Welcome student 🥰</h1>
+
+    <p class="college-link">
+      <a href="https://sci.cu.edu.eg/" target="_blank">
+        كلية العلوم – جامعة القاهرة
+      </a>
+    </p>
+
+    <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="lectures.html">المحاضرات</a>
+      <a href="notes.html">الملاحظات</a>
+      <a href="study.html">المذاكرة</a>
+      <a href="exams.html">الامتحانات</a>
+      <a href="settings.html">الإعدادات</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- العد التنازلي لأقرب محاضرة -->
+    <section class="card">
+      <h2>أقرب محاضرة</h2>
+      <p id="lecture-countdown" class="countdown">
+        لا توجد محاضرات قادمة
+      </p>
+    </section>
+
+    <!-- جدول المحاضرات -->
+    <section class="card">
+      <h2>جدول المحاضرات</h2>
+
+      <table id="lectures-table">
+        <thead>
+          <tr>
+            <th>المادة</th>
+            <th>اليوم</th>
+            <th>الساعة</th>
+            <th>القاعة</th>
+            <th>الدكتور</th>
+            <th>حذف</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- الصفوف ستضاف تلقائيًا -->
+        </tbody>
+      </table>
+
+      <div class="form-group">
+        <input type="text" id="lecture-subject" placeholder="اسم المادة">
+        <input type="text" id="lecture-day" placeholder="اليوم">
+        <input type="time" id="lecture-time">
+        <input type="text" id="lecture-room" placeholder="القاعة">
+        <input type="text" id="lecture-doctor" placeholder="اسم الدكتور">
+        <input type="date" id="lecture-date">
+        <button onclick="addLecture()">➕ Add Lecture</button>
+      </div>
+    </section>
+
+    <!-- الملاحظات السريعة -->
+    <section class="card">
+      <h2>ملاحظات سريعة</h2>
+      <textarea
+        id="notes-text"
+        placeholder="اكتبي ملاحظاتك هنا..."
+        oninput="saveNotes()"
+      ></textarea>
+    </section>
+
+    <!-- الرسالة التحفيزية -->
+    <section class="card message-card">
+      <h2>رسالة خاصة لكِ 💌</h2>
+
+      <button class="remember-btn" onclick="showMessage()">
+        Don't forget me <span class="heart">❤️</span>
+      </button>
+
+      <p id="message-box"></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>©eyad hamdy 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

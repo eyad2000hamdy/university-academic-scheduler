@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المذاكرة |  Science Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Welcome student 🥰</h1>
+
+    <p class="college-link">
+      <a href="https://sci.cu.edu.eg/" target="_blank">
+        كلية العلوم – جامعة القاهرة
+      </a>
+    </p>
+
+    <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="lectures.html">المحاضرات</a>
+      <a href="notes.html">الملاحظات</a>
+      <a href="study.html">المذاكرة</a>
+      <a href="exams.html">الامتحانات</a>
+      <a href="settings.html">الإعدادات</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- مهام المذاكرة -->
+    <section class="card">
+      <h2>مهام المذاكرة 📚</h2>
+
+      <div class="form-group">
+        <input type="text" id="study-task" placeholder="أضيفي مهمة مذاكرة">
+        <button onclick="addTask()">إضافة مهمة</button>
+      </div>
+
+      <ul id="tasks-list"></ul>
+    </section>
+
+    <!-- مؤقت المذاكرة -->
+    
+<section class="card">
+  <h2>مؤقت المذاكرة ⏱️</h2>
+
+  <div class="form-group">
+    <input type="number" id="study-minutes" placeholder="اكتبي عدد الدقائق" min="1">
+  </div>
+
+  <p id="timer-display" class="countdown">00:00</p>
+
+  <div class="form-group">
+    <button onclick="startTimer()">Start</button>
+    <button onclick="pauseTimer()">Pause</button>
+    <button onclick="resetTimer()">Reset</button>
+  </div>
+</section>
+    <!-- المنبه -->
+    <section class="card">
+      <h2>منبه المذاكرة 🔔</h2>
+
+      <div class="form-group">
+        <input type="time" id="alarm-time">
+        <button onclick="setAlarm()">تفعيل المنبه</button>
+      </div>
+
+      <p id="alarm-status"></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>©eyad hamdy 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

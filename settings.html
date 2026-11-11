@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الإعدادات |  Science Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Welcome student 🥰</h1>
+
+    <p class="college-link">
+      <a href="https://sci.cu.edu.eg/" target="_blank">
+        كلية العلوم – جامعة القاهرة
+      </a>
+    </p>
+
+    <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="lectures.html">المحاضرات</a>
+      <a href="notes.html">الملاحظات</a>
+      <a href="study.html">المذاكرة</a>
+      <a href="exams.html">الامتحانات</a>
+      <a href="settings.html">الإعدادات</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- تغيير الاسم -->
+    <section class="card">
+      <h2>تغيير الاسم 👤</h2>
+
+      <div class="form-group">
+        <input type="text" id="new-name" placeholder="اكتبي الاسم الجديد">
+        <button onclick="saveName()">حفظ الاسم</button>
+      </div>
+    </section>
+
+    <!-- تغيير اللون الأساسي -->
+    <section class="card">
+      <h2>تغيير اللون الأساسي 🎨</h2>
+
+      <div class="form-group">
+        <input type="color" id="primary-color" value="#2563eb">
+        <button onclick="saveColor()">حفظ اللون</button>
+      </div>
+    </section>
+
+    <!-- مسح البيانات -->
+    <section class="card">
+      <h2>مسح البيانات 🗑️</h2>
+
+      <p>سيتم حذف جميع المحاضرات، الامتحانات، الملاحظات، والمهام المحفوظة.</p>
+
+      <button class="delete-btn" onclick="clearAllData()">
+        مسح جميع البيانات
+      </button>
+    </section>
+
+    <!-- تصدير نسخة احتياطية -->
+    <section class="card">
+      <h2>نسخة احتياطية 💾</h2>
+
+      <p>يمكنكِ حفظ نسخة من البيانات الموجودة على جهازكِ.</p>
+
+      <button onclick="exportBackup()">تصدير نسخة Backup</button>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>©eyad hamdy 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
